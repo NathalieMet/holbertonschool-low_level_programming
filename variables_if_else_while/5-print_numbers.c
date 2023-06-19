@@ -9,11 +9,11 @@ by a new line.
 
 int main(void)
 {
-	int nbr = 0
-		for (nbr = '0' ; nbr <= '10' ; nbr++)
+	int nbr = 00;
+		for (nbr = 0 ; nbr <= 10 ; nbr++)
 		{
-			printf(nbr);
+			printf("%d", nbr);
 		}
-	printf('\n');
+	putchar('\n');
 	return (0);
 }
