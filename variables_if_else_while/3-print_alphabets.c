@@ -15,10 +15,10 @@ int main(void)
                 putchar (characters);
         }
 
-	 char characters = 'A';
-	 for (characters = 'A' ; characters <= 'Z' ; characters++)
+	 char CHARACTERS = 'A';
+	 for (CHARACTERS = 'A' ; CHARACTERS <= 'Z' ; CHARACTERS++)
         {
-                putchar (characters);
+                putchar (CHARACTERS);
         }
                 putchar ('\n');
         return (0);
