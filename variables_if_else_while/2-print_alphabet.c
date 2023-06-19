@@ -11,7 +11,9 @@ int main(void)
 	char characters = 'a';
 
 	for (characters = 'a' ; characters <= 'z' ; characters++)
+	{
 		putchar (characters);
 		putchar ('\n');
+	}
 	return (0);
 }
