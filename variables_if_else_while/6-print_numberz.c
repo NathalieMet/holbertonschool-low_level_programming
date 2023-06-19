@@ -9,11 +9,12 @@
 
 int main(void)
 {
-        int nbr = 00;
-                for (nbr = 0 ; nbr <= 9 ; nbr++)
-                {
-                        putchar('0' + nbr);
-                }
-        putchar('\n');
-        return (0);
+	int nbr = 00;
+
+	for (nbr = 0 ; nbr <= 9 ; nbr++)
+	{
+		putchar('0' + nbr);
+	}
+	putchar('\n');
+	return (0);
 }
