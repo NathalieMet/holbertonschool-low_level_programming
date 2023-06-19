@@ -8,18 +8,18 @@
 
 int main(void)
 {
-        char characters = 'a';
+	char characters = 'a'
 	char CHARACTERS = 'A';
 
-        for (characters = 'a' ; characters <= 'z' ; characters++)
-        {
-                putchar (characters);
-        }
+	for (characters = 'a' ; characters <= 'z' ; characters++)
+	{
+		putchar (characters);
+	}
 
-	 for (CHARACTERS = 'A' ; CHARACTERS <= 'Z' ; CHARACTERS++)
-        {
-                putchar (CHARACTERS);
-        }
-                putchar ('\n');
-        return (0);
+	for (CHARACTERS = 'A' ; CHARACTERS <= 'Z' ; CHARACTERS++)
+	{
+		putchar (CHARACTERS);
+	}
+	putchar ('\n');
+	return (0);
 }
