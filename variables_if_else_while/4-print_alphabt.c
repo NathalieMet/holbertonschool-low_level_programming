@@ -12,7 +12,7 @@ int main(void)
 
 	for (characters = 'a' ; characters <= 'z' ; characters++)
 	{
-		if ("%c !(q) && !(e)", characters)
+		if ("%c < e > %c || %c < q > %c", characters)
 			putchar (characters);
 	}
 		putchar ('\n');
