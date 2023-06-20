@@ -15,8 +15,10 @@ int main(void)
 	{
 		putchar('0' + nbr);
 		if (nbr < 9)
+		{
 		putchar(',');
 		putchar(' ');
+		}
 		if (nbr == 9)
 			putchar('\n');
 	}
