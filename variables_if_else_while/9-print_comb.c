@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+#define MAX 29
 /**
  * main - prints all single digit numbers of base 10 starting from 0, followed
  * by a new line.
