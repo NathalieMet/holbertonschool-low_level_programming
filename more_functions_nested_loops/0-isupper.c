@@ -1,4 +1,3 @@
-File Edit Options Buffers Tools C Help
 #include "main.h"
 /**
  * _isupper - checks for uppercase character.
