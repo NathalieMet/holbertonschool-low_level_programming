@@ -14,6 +14,7 @@ void puts2(char *str)
 {
 	int a = _strlen(str);
 	int b = 0;
+
 	while (a > b)
 	{
 		_putchar(str[b]);
