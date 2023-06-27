@@ -11,26 +11,18 @@
 
 void puts_half(char *str)
 {
-	char *end = str;
 	int a = _strlen(str);
 
-	while (*end != '\0')
+	if (a % 2 != 0)
+		a++;
+
+	while (*str != '\0')
 	{
-		end++;
-	}
-	end--;
-	while (end > str)
-	{
+		if (*str - '0' >= a/2)
+		{
+			_putchar(*str);
+		}
 		str++;
-		end--;
-	}
-	while (*end != '\0')
-	{
-		end++;
-		if (a % 2 == 0)
-		_putchar(*end);
-		else
-			_putchar(*end++);
 	}
 	_putchar('\n');
 }
