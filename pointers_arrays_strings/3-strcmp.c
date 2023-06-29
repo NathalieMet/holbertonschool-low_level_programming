@@ -5,15 +5,15 @@
 #include "2-strlen.c"
 /**
  * _strcmp - compares two strings.
- * @src : variable
- * @dest : variable
- * @n : variable
+ * @s1 : variable
+ * @s2 : variable
  * Return: void
  */
 
 int _strcmp(char *s1, char *s2)
 {
-        int i;
+	int i;
+
 	i = 0;
 	while (s1[i] != '\0' && s2[i] != '\0')
 	{
@@ -21,5 +21,5 @@ int _strcmp(char *s1, char *s2)
 			break;
 		i++;
 	}
-        return (s1[i] - s2[i]);
+	return (s1[i] - s2[i]);
 }
