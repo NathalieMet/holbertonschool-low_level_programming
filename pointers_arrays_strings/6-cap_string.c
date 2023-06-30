@@ -1,8 +1,6 @@
 #include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 #include "main.h"
-#include "2-strlen.c"
 /**
  * cap_string - capitalizes all words of a string.
  * @s : variable
@@ -11,25 +9,32 @@
 
 char *cap_string(char *s)
 {
-        int i;
+	int i;
+	int flag = 1;
+
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (i == 0)
+		if (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
+
 		{
-			if ((s[i] >= 'a' && s[i] <='z'))
-				s[i] = s[i] -32;
-			continue;
+			flag = 1;
+		continue;
 		}
-		if (s[i] == ' ')
-			i++;
-		if (s[i] >='a' && s[i] <= 'z')
+		if (flag == 1)
 		{
-			s[i] = s[i] -32;
-			continue;
+			if (s[i] >= 'a' && s[i] <= 'z')
+			{
+				s[i] = s[i] - 32;
+			}
+			flag = 0;
 		}
 		else
 		{
-			if (s[i]>='A' && s[i]<='Z')
-				s[i]=s[i]+32;
+			if (s[i] >= 'A' && s[i] <= 'Z')
+			{
+				s[i] = s[i] + 32;
+			}
 		}
-		return (s)
+	}
+		return (s);
+}
