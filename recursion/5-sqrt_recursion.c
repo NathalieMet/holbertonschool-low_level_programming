@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * _sqrt_helper - avoid overflow
  * _sqrt_recursion - returns the natural square root of a number.
  * @n : variable
  * @x : variable
@@ -14,6 +13,12 @@ int _sqrt_recursion(int n)
 {
 	return (_sqrt_helper(n, 1));
 }
+/**
+ * _sqrt_helper - avoid overflow
+ * @n : variable
+ * @x : variable
+ * Return: void
+ */
 int _sqrt_helper(int n, int x)
 {
 float q;
