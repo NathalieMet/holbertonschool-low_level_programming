@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 /**
- * main - adds positive numbers.
+ * main - adds positive numbers
  * @argc : argument
  * @argv : argument
  * Return: Always 0.
