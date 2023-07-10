@@ -17,6 +17,8 @@ char *str_concat(char *s1, char *s2)
 	int j;
 	int k;
 
+	if (s1 == NULL && s2 == NULL)
+		return (_strdup("\0"));
 	if (s1 == NULL)
 		return (_strdup(s2));
 	if (s2 == NULL)
