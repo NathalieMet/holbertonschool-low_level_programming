@@ -20,12 +20,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s1 == NULL && s2 == NULL)
 		return (strdup("\0"));
 	if (s1 == NULL)
-	{
-		if (n == 0)
-			return (_strdup("\0"));
-		else
-			return (_strdup(s2));
-	}
+		return (_strdup(s2));
 	if (s2 == NULL)
 		return (strdup(s1));
 
