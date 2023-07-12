@@ -18,7 +18,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int k;
 
 	if (s1 == NULL && s2 == NULL)
-		return (_strdup("\0"));
+		return (strdup("\0"));
 	if (s1 == NULL)
 	{
 		if (n == 0)
@@ -27,7 +27,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			return (_strdup(s2));
 	}
 	if (s2 == NULL)
-		return (_strdup(s1));
+		return (strdup(s1));
 
 	for (j = 0; s1[j] != '\0'; j++)
 	{
