@@ -18,6 +18,7 @@ int i = 0;
 {
 	if (h->n == '\0')
 	{
+		printf("0\n");
 		h = h->next;
 		i++;
 	}
