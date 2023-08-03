@@ -15,21 +15,20 @@ void print_binary(unsigned long int n)
 int i = 63;
 
 if (n == 0)
-_putchar ('0');
+	_putchar('0');
 
-while (i >= 0 && (n & (1 << i)) == 0)
+while (i >= 0 && (n & ((unsigned long int)1 << i)) == 0)
 {
-i--;
+	i--;
 }
 for (; i >= 0; i--)
 {
-if ((n & (1 << i)) != 0)
+	if ((n & ((unsigned long int)1 << i)) != 0)
 {
-_putchar('1');
-}
-else
+	_putchar('1');
+} else
 {
-_putchar('0');
+	 _putchar('0');
 }
 }
 }
