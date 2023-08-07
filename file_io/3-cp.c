@@ -30,16 +30,13 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-//ouvrir le premier (file_from)//
-{
+
 fd_from = open(file_from, O_RDONLY);
 if (fd_from == -1)
 {
 	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 	exit(98);
 }
-
-//ouvrir le deuxieme (file_to)//
 
 fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 if (fd_to == -1)
@@ -48,8 +45,6 @@ if (fd_to == -1)
 	close(fd_from);
 	exit(99);
 }
-
-//copier et coller//
 
 while ((bytes_read = read(fd_from, buffer, BUFFER_SIZE)) > 0)
 	{
@@ -61,8 +56,6 @@ while ((bytes_read = read(fd_from, buffer, BUFFER_SIZE)) > 0)
 			exit(99);
 		}
 	}
-
-//cas d'erreurs//
 
 if (bytes_read == -1)
 {
