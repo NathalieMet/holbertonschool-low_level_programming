@@ -30,9 +30,9 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	while (temp != NULL)
 	{
-		if (!strcmp(key, temp->key))
+		if (strcmp(temp->key, key) == 0)
 			return (temp->value);
+		temp = temp->next;
 	}
-	temp = temp->next;
-	return (0);
+	return (NULL);
 }
