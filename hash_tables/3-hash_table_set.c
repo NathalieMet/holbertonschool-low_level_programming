@@ -24,16 +24,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *item;
 
 	if (ht == NULL || key == NULL || value == NULL)
-	{
 		return (0);
-		}
-
 	item = (hash_node_t *)malloc(sizeof(hash_node_t));
-
 	if (item == NULL)
-	{
 		return (0);
-	}
 	item->key = strdup(key);
 	item->value = strdup(value);
 	if (item->key == NULL || item->value == NULL)
@@ -41,11 +35,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		free(item);
 		return (0);
 	}
-
 	index = key_index((const unsigned char *)key, ht->size);
-
 	current_item = ht->array[index];
-
 	if (current_item == NULL)
 	{
 		item->next = NULL;
@@ -53,8 +44,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	else
 	{
-		item->next = current_item;
+		if (!strcmp(current_item->key, key))
+		{
+			item->next = current_item;
 		ht->array[index] = item;
+		}
+		else
+		{
+			current_item->value = strdup(value);
+			free(item);
+		}
 	}
 return (1);
 }
