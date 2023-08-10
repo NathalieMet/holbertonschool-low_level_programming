@@ -5,7 +5,7 @@
 #include <unistd.h>
 
 /**
- * hash_table_print- prints a hash table.
+ * hash_table_delete- prints a hash table.
  * @ht:is the hash table
  * Return: void
  */
@@ -18,20 +18,19 @@ void hash_table_delete(hash_table_t *ht)
 	if (ht == NULL)
 		return;
 
+	while (i < ht->size)
 	{
-		while (i < ht->size)
+		p = ht->array[i];
+		while (p != NULL)
 		{
-			p = ht->array[i];
-			while (p != NULL)
-			{
-				temp = p;
-				p = p->next;
-				free(temp->key);
-				free(temp->value);
-				free(temp);
-			}
-			i++;
+			temp = p;
+			p = p->next;
+			free(temp->key);
+			free(temp->value);
+			free(temp);
 		}
-		free(ht);
+		i++;
 	}
+		free(ht->array);
+		free(ht);
 }

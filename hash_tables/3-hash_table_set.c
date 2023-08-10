@@ -29,7 +29,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		index = key_index((const unsigned char *)key, ht->size);
 	item = (hash_node_t *)malloc(sizeof(hash_node_t));
 	if (item == NULL)
-		return (0);
+		{return (0);
+		free(item);}
 	item->key = strdup(key);
 	item->value = strdup(value);
 	current_item = ht->array[index];
